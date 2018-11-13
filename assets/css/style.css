@@ -1,0 +1,7 @@
+main {
+    background: #070707;
+    background-image: url(hangar.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
