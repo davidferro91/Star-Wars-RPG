@@ -3,5 +3,25 @@ main {
     background-image: url(hangar.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
+}
+
+#vaderImg {
+    height:200px;
+    width:175px;
+}
+
+#obiwanImg {
+    height:200px;
+    width:175px;
+}
+
+#yodaImg {
+    height:200px;
+    width:175px;
+}
+
+#jarjarImg {
+    height:200px;
+    width:175px;
 }

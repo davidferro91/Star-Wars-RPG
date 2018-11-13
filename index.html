@@ -5,10 +5,12 @@
         <title>Star Wars RPG!</title>
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <!-- Fonts generated at the following: -->
         <!-- <link href="https://fontmeme.com/star-wars-font/"> -->
     </head>
+
     <body>
         <main>
             <header class="container">
@@ -21,14 +23,16 @@
                     </div>
                 </div>
             </header>
-            <section class="container">
+
+            <section class="container-fluid mx-5">
                 <div class="row" id="charHolder">
-                    <div class="col" id="vaderHolder"></div>
-                    <div class="col" id="obiwanHolder"></div>
-                    <div class="col" id="yodaHolder"></div>
-                    <div class="col" id="jarJarHolder"></div>
+                    <div class="col-xs-2 p-1" id="vaderHolder"><img id="vaderImg" src="assets/images/darthVader.jpg" alt="Vader"></div>
+                    <div class="col-xs-2 p-1" id="obiwanHolder"><img id="obiwanImg" src="assets/images/obiWan.jpg" alt="ObiWan"></div>
+                    <div class="col-xs-2 p-1" id="yodaHolder"><img id="yodaImg" src="assets/images/yoda.jpg" alt="Yoda"></div>
+                    <div class="col-xs-2 p-1" id="jarjarHolder"><img id="jarjarImg" src="assets/images/darthJarJar.jpg" alt="JarJar"></div>
                 </div>
             </section>
+
             <article class="container-fluid m-4">
                 <div class="row">
                     <div class="col">
@@ -36,11 +40,13 @@
                     </div>
                 </div>
             </article>
+
             <section class="container">
                 <div class="row" id="yourChar">
                     <div class="col" id="yourHolder"></div>
                 </div>
             </section>
+
             <article class="containter-fluid pl-3 m-4">
                 <div class="row my-2">
                     <div class="col">
@@ -53,6 +59,7 @@
                     </div>
                 </div>
             </article>
+
             <section class="container">
                 <div class="row" id="enemyChar">
                     <div class="col" id="enemy1Holder"></div>
@@ -60,6 +67,7 @@
                     <div class="col" id="enemy3Holder"></div>
                 </div>
             </section>
+
             <article class="containter-fluid pl-3 m-4">
                 <div class="row my-2">
                     <div class="col">
@@ -67,9 +75,11 @@
                     </div>
                 </div>
             </article>
+
             <div class="container">
                 <button type="button" class="btn btn-primary" id="attBtn"><strong>Attack</strong></button>
             </div>
+
             <article class="containter-fluid pl-3 m-4">
                 <div class="row my-2">
                     <div class="col">
@@ -77,6 +87,7 @@
                     </div>
                 </div>
             </article>
+
             <section class="container">
                 <div class="row" id="defChar">
                     <div class="col" id="defHolder"></div>
@@ -88,9 +99,13 @@
                     <div class="col" id="defInfo"></div>
                 </div>
             </section>
+
             <div class="container">
                 <button type="button" class="btn btn-primary" id="restBtn"><strong>Restart</strong></button>
             </div>
         </main>
+
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+
     </body>
 </html>
