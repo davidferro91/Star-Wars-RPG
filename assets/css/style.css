@@ -3,10 +3,16 @@ main {
     background-image: url(hangar.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 100vh;
 }
 
 .heroImage {
-    height:200px;
-    width:175px;
+    height:175px;
+    width:150px;
+    border: 10px ridge whitesmoke;
+    box-shadow: 10px 3px 10px rgba(33, 33, 33, 0.7);
+}
+
+.captionBackground {
+    background: whitesmoke;
 }
