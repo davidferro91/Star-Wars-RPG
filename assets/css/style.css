@@ -6,22 +6,7 @@ main {
     height: 100%;
 }
 
-#vaderImg {
-    height:200px;
-    width:175px;
-}
-
-#obiwanImg {
-    height:200px;
-    width:175px;
-}
-
-#yodaImg {
-    height:200px;
-    width:175px;
-}
-
-#jarjarImg {
+.heroImage {
     height:200px;
     width:175px;
 }
