@@ -3,17 +3,30 @@ main {
     background-image: url(hangar.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1000px;
+    height: 750px;
 }
 
 .heroImage {
-    height:150px;
-    width:130px;
-    border: 10px ridge whitesmoke;
-    box-shadow: 10px 3px 10px rgba(33, 33, 33, 0.7);
+    height:100px;
+    width:90px;
+    border: 6px ridge whitesmoke;
+    box-shadow: 6px 3px 6px rgba(33, 33, 33, 0.7);
     cursor: pointer;
 }
 
 .captionBackground {
     background: whitesmoke;
+    padding: 2px;
+    margin:0px;
+    font-size: 11px;
+    font-weight:bold;
+    color: rgb(33, 33, 33);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#attackInfo {
+    background: whitesmoke;
+    color: rgb(33, 33, 33);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 0.8;
 }
