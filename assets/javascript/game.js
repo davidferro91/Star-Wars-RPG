@@ -1,6 +1,6 @@
-var hitPoints = [140, 120, 110, 170];
-var attackValues = [8, 3, 6, 4];
-var counterAttack = [35, 25, 20, 45];
+var hitPoints = [160, 140, 120, 150];
+var attackValues = [7, 10, 13, 9];
+var counterAttack = [30, 24, 26, 28];
 var imageIdArray = ["vaderImg", "obiwanImg", "yodaImg", "jarjarImg"];
 var imageSourceArray = ["assets/images/darthVader.jpg", "assets/images/obiWan.jpg", "assets/images/yoda.jpg", "assets/images/darthJarJar.jpg"];
 var imageAltArray = ["Darth Vader", "Obi-Wan Kenobi", "Yoda", "Darth Jar Jar"];
@@ -33,6 +33,7 @@ for (var i=0; i<hitPoints.length; i++) {
 }
 $("#resetBtn").hide();
 $("#attackInfo").hide();
+$("#attBtn").hide();
 
 function createImage (i) {
     var heroFigure = $("<figure>")
@@ -59,6 +60,8 @@ function characterSelected (i) {
     }
     yourChar=true;
     $(yourHolderArray[i]).show();
+    var yourImage = createImage(i);
+    $(yourHolderArray[i]).html(yourImage);
     for (var j=1;j<hitPoints.length;j++) {
         $(enemHolderArray[(i+j)%4]).show();
     }
@@ -68,6 +71,9 @@ function enemySelected (i) {
     $(enemHolderArray[i]).hide();
     enemChar=true;
     $(defHolderArray[i]).show();
+    var defImage = createImage(i);
+    $(defHolderArray[i]).html(defImage);
+    $("#attBtn").show();
 }
 
 $("#vaderImg").on("click", function() {
@@ -128,10 +134,10 @@ $("#jarjarImg3").on("click", function() {
 
 $("#attBtn").on("click", function() {
     $("#attackInfo").show();
-    hitPoints[enemSelector] = hitPoints[enemSelector] - (attackValues[charSelector] * Math.pow(2,attNumber));
+    hitPoints[enemSelector] = hitPoints[enemSelector] - (attackValues[charSelector] * Math.round((attNumber+1.15)*1.55));
     var defImage = createImage(enemSelector);
     $(defHolderArray[enemSelector]).html(defImage);
-    $("#attackInfo").html(imageAltArray[charSelector]+" dealt " + (attackValues[charSelector] * Math.pow(2,attNumber)) + " damage to " + imageAltArray[enemSelector] + "!");
+    $("#attackInfo").html(imageAltArray[charSelector]+" dealt " + (attackValues[charSelector] * Math.round((attNumber+1.15)*1.55)) + " damage to " + imageAltArray[enemSelector] + "!");
     
     if (hitPoints[enemSelector] < 1) {
         $(defHolderArray[enemSelector]).hide();
@@ -139,6 +145,7 @@ $("#attBtn").on("click", function() {
         $("#attackInfo").append("<br>"+imageAltArray[charSelector]+" defeated "+ imageAltArray[enemSelector]+"!");
         winNumber++;
         if (winNumber < 3){
+            $("#attBtn").hide();
             $("#attackInfo").append("<br>Select another opponent.");
         }
         else {
@@ -161,4 +168,24 @@ $("#attBtn").on("click", function() {
         $("#attackInfo").append("<br><h3>You lose!  "+imageAltArray[charSelector]+" has died!  Click the Restart button to play again.</h3>")
     }
     attNumber++;
+});
+
+$("#resetBtn").on("click", function(){
+    hitPoints = [160, 140, 120, 150];
+    attackValues = [7, 10, 13, 9];
+    charSelector = -1;
+    enemSelector = -1;
+    yourChar = false;
+    enemChar = false;
+    attNumber = 0;
+    winNumber = 0;
+    for (var i=0; i<hitPoints.length; i++) {
+        $(topHolderArray[i]).show();
+        $(yourHolderArray[i]).hide();
+        $(enemHolderArray[i]).hide();
+        $(defHolderArray[i]).hide();
+    }
+    $("#resetBtn").hide();
+    $("#attackInfo").hide();
+    $("#attBtn").hide();
 });
