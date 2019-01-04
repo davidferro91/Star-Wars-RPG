@@ -1,5 +1,8 @@
 # Star Wars RPG
 
+https://davidferro91.github.io/Star-Wars-RPG/
+
+## Description
 A long time ago, in a galaxy far, far away... there was no JavaScript.  Luckily for us, we don't live a long time ago in a galaxy far, far away.
 
 This is a basic Star Wars themed role-playing game where you can choose your character from four and then fight the other three.  There are different combinations that you can choose to fight your foes.  Some will lead you to victory, but others will lead you to defeat.  It is up to you to figure out which path is the correct path, depending on which hero you choose.
